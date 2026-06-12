@@ -1,0 +1,19 @@
+return {
+  -- 1. Отключаем встроенную тему Tokyonight, чтобы она не перехватывала инициативу
+  { "folke/tokyonight.nvim", enabled = false },
+
+  -- 2. Принудительно заставляем LazyVim брать цвета из палитры Alacritty
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = function()
+        -- Выключаем обработку TrueColor GUI.
+        -- Без этого Neovim пытается сам рисовать цвета вместо чтения из терминала.
+        vim.opt.termguicolors = false
+        
+        -- Сбрасываем цвета на базовые системные ANSI-цвета
+        vim.cmd([[colorscheme default]])
+      end,
+    },
+  },
+}
