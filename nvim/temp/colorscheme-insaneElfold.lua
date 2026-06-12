@@ -11,50 +11,47 @@ return {
       sidebars = { "snacks_explorer", "Trouble", "qf", "help" },
 
       -- 1. Исправляем базовую палитру темы для разделителей под табами
-      on_colors = function(c)
-        c.border = "#ede0de" -- Задаем цвет всех базовых границ
-        c.bg_statusline = "" -- Задаем цвет для статусных и горизонтальных линий в прозрачном режиме
+on_colors = function(c)
+  c.border = "#0000ff"           -- Bright Blue Window Borders
+  c.bg_statusline = "#121212"    -- Dark Grey
 
-        c.bg = "#585858"
-        c.bg_dark = "#1C1C1C"
-        -- c.bg_float = "#291414"
-        c.bg_highlight = ""
-        c.bg_popup = "#291414"
-        c.bg_search = "#fffb33"
-        c.bg_sidebar = "#1a0a0a"
-        c.bg_visual = "#A6ADC8"
+  -- Фоны
+  c.bg = "#000000"               -- Pure Black
+  c.bg_dark = "#000000"          -- Pure Black
+  c.bg_float = "#121212"         -- Dark Grey
+  c.bg_highlight = "#1c1c1c"     -- Light Hover Grey
+  c.bg_popup = "#121212"         -- Dark Grey
+  c.bg_search = "#008b8b"        -- Dark Cyan
+  c.bg_sidebar = "#000000"       -- Pure Black
+  c.bg_visual = "#1c1c1c"        -- Light Hover Grey
 
-        c.fg = "#f3f2f2"
-        c.fg_dark = "#fffb33"
-        c.fg_float = "#f3f2f2"
-        c.fg_gutter = "#4a2020"
-        c.fg_sidebar = "#f3f2f2"
+  -- Текст
+  c.fg = "#ffffff"               -- Bright White
+  c.fg_dark = "#ffffff"          -- Bright White
+  c.fg_float = "#ffffff"         -- Bright White
+  c.fg_gutter = "#008b8b"        -- Dark Cyan
+  c.fg_sidebar = "#ffffff"       -- Bright White
 
-        c.blue = "#94E2D5"
-        -- c.cyan = "#ff9533"
-        -- c.green = "#ff4d50"
-        -- c.magenta = "#fffb33"
-        -- c.orange = "#ff9533"
-        -- c.purple = "#b81418"
-        -- c.red = "#e80005"
-        -- c.yellow = "#fffb33"
+  -- Акценты
+  c.blue = "#0000ff"             -- Bright Blue
+  c.cyan = "#00ffff"             -- Cyan
+  c.green = "#00ff00"            -- Green
+  c.magenta = "#ff0000"          -- Red
+  c.orange = "#ffff00"           -- Yellow
+  c.purple = "#008b8b"           -- Dark Cyan
+  c.red = "#ff0000"              -- Red
+  c.yellow = "#ffff00"           -- Yellow
 
-        c.border_highlight = "#ff4d50"
-        c.comment = "#6b3333"
-      end,
+  -- Разделители
+  c.border_highlight = "#00ffff" -- Cyan
+  c.comment = "#008b8b"          -- Dark Cyan
+end,
 
       on_highlights = function(hl, c)
-        hl.SnacksPickerCursorLine = { fg = "#EDE0DE", bg = "NONE" }
-        hl.SnacksPickerListCursorLine = { fg = "#181818", bg = "#A6ADC8" }
-        -- hl.CursorLine = { bg = "#181818" }
-        hl.SnacksPickerDir = { fg = "#EDE0DE" }
-        -- hl.SnacksPickerPathHidden = { fg = "#fffb33" }
         -- Числа строк белые
         hl.LineNr = { fg = "#ede0de" }
         hl.CursorLineNr = { fg = "#ffffff", bold = true }
-        hl.SnacksPickerFile = { fg = "#EDE0DE" }
-        hl.MiniIconsAzure = { fg = "#94E2D5" } -- папки обычно azure
-        hl.MiniIconsBlue = { fg = "#EDE0DE" }
+
         -- Sidebar — всё в белых/серых тонах
         hl.SnacksExplorerFile = { fg = "#ede0de" }
         hl.SnacksExplorerDir = { fg = "#ffffff", bold = true }
@@ -65,8 +62,8 @@ return {
         hl.SnacksExplorerLink = { fg = "#ede0de" }
 
         -- Заголовок "Explorer" и его рамка
-        hl.SnacksWinBar = { fg = "#fffb33", bg = "NONE" }
-        hl.SnacksWinBarBorder = { fg = "#fffb33", bg = "NONE" }
+        hl.SnacksWinBar = { fg = "#ede0de", bg = "NONE" }
+        hl.SnacksWinBarBorder = { fg = "#ede0de", bg = "NONE" }
         hl.SnacksPickerTitle = { fg = "#ede0de", bg = "NONE" }
 
         -- Счётчик 31/31
@@ -88,21 +85,11 @@ return {
         hl.MiniIconsWhite = { fg = "#ffffff" }
         hl.DevIconDefault = { fg = "#ede0de" }
 
+
         -- Базовое заполнение линии вкладок (Neovim TabLine)
         hl.TabLine = { fg = "#ede0de", bg = "NONE" }
         hl.TabLineFill = { fg = "#ede0de", bg = "NONE" }
         hl.TabLineSel = { fg = "#ede0de", bg = "NONE" }
-
-        hl.MiniIconsAzure = { fg = "#89B4FA" }
-        hl.MiniIconsBlue = { fg = "#89B4FA" }
-        hl.MiniIconsCyan = { fg = "#94E2D5" }
-        hl.MiniIconsGreen = { fg = "#A6E3A1" }
-        hl.MiniIconsGrey = { fg = "#A6ADC8" }
-        hl.MiniIconsOrange = { fg = "#FAB387" }
-        hl.MiniIconsPurple = { fg = "#CBA6F7" }
-        hl.MiniIconsRed = { fg = "#F38BA8" }
-        hl.MiniIconsYellow = { fg = "#F9E2AF" }
-        hl.MiniIconsWhite = { fg = "#CDD6F4" }
       end,
     },
   },
