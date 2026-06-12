@@ -1,0 +1,20 @@
+
+    window-rule {
+        // geometry-corner-radius 20 // Set every window radius to 20
+        clip-to-geometry true
+        tiled-state true
+        // open-maximized true
+    }
+    window-rule {
+        // Targets only windows that are in the floating layout
+        match is-floating=true
+        
+        // Sets the window transparency (e.g., 85% opaque)
+        opacity 0.85
+    }
+
+
+    layer-rule {
+        match namespace="^noctalia-wallpaper*"
+        place-within-backdrop true
+    }

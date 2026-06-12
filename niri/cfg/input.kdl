@@ -1,0 +1,25 @@
+// ────────────── Input Configuration ──────────────
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Input
+
+input {
+    mouse {
+        accel-speed 0.0
+        accel-profile "flat"
+    }
+    keyboard {
+        xkb {
+            // You can set rules, model, layout, variant and options.
+            // For more information, see xkeyboard-config(7).
+            layout "us,ru"
+            options "caps:swapescape,grp:alt_shift_toggle"
+        }
+    }
+
+    touchpad {
+        tap // Enable tap-to-click
+        natural-scroll // Enable natural (macOS-style) scrolling
+    }
+
+    // focus-follows-mouse // Automatically focus windows under the mouse pointer
+    // workspace-auto-back-and-forth // Enable workspace back & forth switching
+}

@@ -1,0 +1,10 @@
+# [preview]
+# wrap            = "no"
+# max_width       = 600
+# max_height      = 900
+# image_delay     = 30
+# image_quality   = 75
+# [[manager.prepend_keymap]]
+# on   = "T"
+# run  = "plugin --sync hide-preview"
+# desc = "Hide or show preview"
