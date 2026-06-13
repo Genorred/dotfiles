@@ -3,3 +3,4 @@
 -- Add any additional keymaps here
 -- vim.keymap.set("n", "<leader>ss", "<cmd>SessionSave<CR>", { desc = "Save session" })
 -- vim.keymap.set("n", "<leader>sr", "<cmd>SessionRestore<CR>", { desc = "Restore session" })
+vim.keymap.set("n", "<leader>h", function() Snacks.dashboard.open() end, { desc = "Open Dashboard" })
