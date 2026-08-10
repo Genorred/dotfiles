@@ -7,7 +7,8 @@ binds {
     // https://docs.noctalia.dev/getting-started/keybinds/
 
     MOD+SHIFT+ESCAPE                     { show-hotkey-overlay; }
-Mod+Shift+R { spawn "niri" "msg" "action" "reload-config"; }
+    Mod+Shift+R { spawn "niri" "msg" "action" "reload-config"; }
+    // Alt+Alt_R { spawn-sh "claude-desktop"; }
     // ─── Applications ───
     MOD+RETURN hotkey-overlay-title="Open Terminal: Alacritty" {spawn "alacritty" "-e" "sh" "-c" "fastfetch; exec zsh";}
     MOD+SPACE hotkey-overlay-title="App Launcher" {
@@ -23,11 +24,18 @@ Mod+Shift+R { spawn "niri" "msg" "action" "reload-config"; }
     MOD+SHIFT+P hotkey-overlay-title="Power Menu" {
         spawn-sh "echo -e 'Shutdown\nReboot\nLogout\nSuspend' | rofi -dmenu -p 'Power' | xargs -I{} sh -c 'case {} in Shutdown) poweroff;; Reboot) reboot;; Logout) niri msg action quit;; Suspend) systemctl suspend;; esac'";
     }
-MOD+PERIOD hotkey-overlay-title="Emoji Picker" { spawn-sh "rofimoji --files kaomoji --action copy"; }
-MOD+COMMA hotkey-overlay-title="Emoji Picker" { spawn-sh "rofimoji --files emojis_smileys_emotion --action copy"; }
+    MOD+PERIOD hotkey-overlay-title="Emoji Picker" { spawn-sh "rofimoji --files kaomoji --action copy"; }
+    MOD+COMMA hotkey-overlay-title="Emoji Picker" { spawn-sh "rofimoji --files emojis_smileys_emotion --action copy"; }
     // MOD+S                               hotkey-overlay-title="Open Browser: firefox" { spawn "firefox"; }
-    MOD+T                               hotkey-overlay-title="Open Bluetooth manage: zellij" { spawn-sh "alacritty -e zellij"; }
+    MOD+D                               hotkey-overlay-title="Open Montage manage: Davinci Resolve" { spawn-sh "env -u QT_QPA_PLATFORM  davinci-resolve"; }
     MOD+B                               hotkey-overlay-title="Open Bluetooth manage: bluetui" { spawn-sh "alacritty -e bluetui"; }
+    MOD+I                               hotkey-overlay-title="Open Wifi manage: nmtui" { spawn-sh "alacritty -e nmtui"; }
+    MOD+Shift+M                         hotkey-overlay-title="Open Tracks manage: cmus" { spawn-sh "alacritty -e cmus"; }
+    MOD+P                               hotkey-overlay-title="Open Profiler: btop" { spawn-sh "alacritty -e btop"; }
+    MOD+A                               hotkey-overlay-title="Open Profiler: aquarium" { spawn-sh "alacritty --class asciiquarium-fullscreen -e asciiquarium --transparent"; }
+    MOD+S                               hotkey-overlay-title="Open Profiler: session" { spawn-sh "alacritty -e zellij --layout welcome attach --create welcome"; }
+
+    MOD+R                               hotkey-overlay-title="Open Profiler: btop" { spawn-sh "alacritty -e nvim"; }
     Mod+M { spawn "wl-kbptr"; }
     MOD+ALT+L                           hotkey-overlay-title="Lock Screen: noctalia lock" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
 
@@ -40,6 +48,9 @@ MOD+COMMA hotkey-overlay-title="Emoji Picker" { spawn-sh "rofimoji --files emoji
     XF86AUDIOLOWERVOLUME                allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume decrease"; }
     XF86AUDIOMUTE                       allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume muteOutput"; }
     XF86AUDIOMICMUTE                    allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume muteInput"; }
+    XF86AudioPlay { spawn "playerctl" "play-pause"; }
+    XF86AudioNext { spawn "playerctl" "next"; }
+    XF86AudioPrev { spawn "playerctl" "previous"; }
 
     // ─── Window Movement and Focus ───
     MOD+Q                               { close-window; }

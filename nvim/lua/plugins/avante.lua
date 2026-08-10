@@ -42,20 +42,20 @@ return {
     providers = {
       openai = {
         __inherited_from = "openai",
-        endpoint = "http://localhost:5001/v1/",
+        endpoint = "http://localhost:11434/v1/",
         model = "koboldcpp",
         timeout = 30000,
         -- context_window = 16384, -- 🌟 Tells Avante your exact Kobold context capacity
         -- context_window = 32768, -- 🌟 Tells Avante your exact Kobold context capacity
         extra_request_body = {
-          temperature = 0.1,
-          top_p = 1,
-          max_tokens = 4096,
-          -- max_completion_tokens = 2048, -- Maximum length for the model's response
+          temperature = 0.6,
+          max_tokens = 8192,
+          top_p = 0.85,
+          top_k = 20,
+          min_p = 0.0,
+          rep_pen = 1.1,
+          -- max_completion_tokens = 2048,
         },
-        system_prompt = function(original)
-                  return "/no_think\n\n" .. (original or "")
-                end,
         -- disable_tools = true,
       },
     }
@@ -87,7 +87,7 @@ return {
               insert_mode = true,
             },
             -- required for Windows users
-            use_absolute_path = true,
+            -- use_absolute_path = true,
           },
         },
       },

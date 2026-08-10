@@ -41,12 +41,48 @@ return {
           },
           schema = {
             model = {
-              default = "qwen3.5:4b", -- Handled client side
+              order = 1,
+              default = "qwen3.5:4b",
+            },
+            temperature = {
+              order = 2,
+              mapping = "parameters",
+              type = "number",
+              default = 0.6,
+              validate = function(n)
+                return n >= 0 and n <= 2, "Must be between 0 and 2"
+              end,
             },
             max_tokens = {
-              default = 4096, -- Adjust this value based on your requirements
-              desc = "The maximum number of tokens to generate in the completion.",
+              order = 3,
               mapping = "parameters",
+              type = "number",
+              default = 8192,
+              desc = "The maximum number of tokens to generate in the completion.",
+            },
+            top_p = {
+              order = 4,
+              mapping = "parameters",
+              type = "number",
+              default = 0.85,
+            },
+            top_k = {
+              order = 5,
+              mapping = "parameters",
+              type = "number",
+              default = 20,
+            },
+            min_p = {
+              order = 6,
+              mapping = "parameters",
+              type = "number",
+              default = 0.0,
+            },
+            rep_pen = {
+              order = 7,
+              mapping = "parameters",
+              type = "number",
+              default = 1.1,
             },
           },
         })

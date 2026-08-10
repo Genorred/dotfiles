@@ -10,9 +10,21 @@
         match is-floating=true
         
         // Sets the window transparency (e.g., 85% opaque)
-        opacity 0.85
+        // opacity 0.85
     }
 
+    window-rule {
+        match app-id="deskflow"
+        match title="Deskflow"
+        
+        // Forces the window to stay maximized or fullscreened to grab the cursor properly
+        open-maximized true
+        // exclude-from-states true
+    }
+    window-rule {
+        match app-id="asciiquarium-fullscreen"
+        open-maximized true
+    }
 
     layer-rule {
         match namespace="^noctalia-wallpaper*"
