@@ -18,6 +18,7 @@ binds {
     MOD+N hotkey-overlay-title="Window Switcher" {
         spawn-sh "rofi -show window -show-icons";
     }
+    Mod+F1 { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "plugin:keybind-cheatsheet" "toggle"; }
     MOD+V hotkey-overlay-title="Clipboard History" {
         spawn-sh "cliphist list | rofi -dmenu | cliphist decode | wl-copy";
     }
@@ -44,10 +45,23 @@ binds {
     MOD+SHIFT+E                               hotkey-overlay-title="File Manager: Nautilus" { spawn "nautilus"; }
 
     // ─── Audio Controls ───
-    XF86AUDIORAISEVOLUME                allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume increase"; }
-    XF86AUDIOLOWERVOLUME                allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume decrease"; }
-    XF86AUDIOMUTE                       allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume muteOutput"; }
-    XF86AUDIOMICMUTE                    allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume muteInput"; }
+    // XF86AUDIORAISEVOLUME                allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume increase"; }
+    // XF86AUDIOLOWERVOLUME                allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume decrease"; }
+    // XF86AUDIOMUTE                       allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume muteOutput"; }
+    // XF86AUDIOMICMUTE                    allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume muteInput"; }
+// Audio Controls — Noctalia v5
+    XF86AUDIORAISEVOLUME allow-when-locked=true {
+        spawn "noctalia" "msg" "volume-up";
+    }
+    XF86AUDIOLOWERVOLUME allow-when-locked=true {
+        spawn "noctalia" "msg" "volume-down";
+    }
+    XF86AUDIOMUTE allow-when-locked=true {
+        spawn "noctalia" "msg" "volume-mute";
+    }
+    XF86AUDIOMICMUTE allow-when-locked=true {
+        spawn "noctalia" "msg" "mic-mute";
+    }
     XF86AudioPlay { spawn "playerctl" "play-pause"; }
     XF86AudioNext { spawn "playerctl" "next"; }
     XF86AudioPrev { spawn "playerctl" "previous"; }

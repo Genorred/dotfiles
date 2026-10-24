@@ -1,0 +1,10 @@
+{
+  "apiKey": "5dd0112d8aad414aac9bd212ec60efdb",
+  "country": "us",
+  "language": "ru",
+  "category": "general",
+  "refreshInterval": 30,
+  "maxHeadlines": 10,
+  "rollingSpeed": 50,
+  "widgetWidth": 300
+}

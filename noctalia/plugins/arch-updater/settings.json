@@ -1,0 +1,19 @@
+{
+  "checkCmd": "(checkupdates; paru -Qua) 2>/dev/null",
+  "updateCmd": "ghostty -e bash -c 'echo \"Updating System...\";paru; flatpak update; read -n 1 -p \"Press any key to exit...\"'",
+  "flatpak": true,
+  "noctalia": true,
+  "boldVer": true,
+  "toast": true,
+  "desktopTip": true,
+  "hideOnEmpty": false,
+  "refreshTimer": true,
+  "refreshInterval": 120,
+  "tooltip": true,
+  "boldText": true,
+  "iconName": "arrow-big-down-lines",
+  "useDistroLogo": false,
+  "customIconPath": "",
+  "enableColorization": false,
+  "iconColor": "none"
+}

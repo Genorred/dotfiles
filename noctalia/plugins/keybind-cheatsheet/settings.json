@@ -1,0 +1,774 @@
+{
+  "cheatsheetData": [
+    {
+      "title": "Noctalia",
+      "binds": [
+        {
+          "keys": "MOD + ALT + L",
+          "desc": "Lock Screen: noctalia lock",
+          "_verb": "spawn-sh",
+          "_mods": "",
+          "_mainKey": "L"
+        },
+        {
+          "keys": "Vol Up",
+          "desc": "Volume Up",
+          "_verb": "spawn-sh",
+          "_mods": "",
+          "_mainKey": "XF86AUDIORAISEVOLUME"
+        },
+        {
+          "keys": "Vol Down",
+          "desc": "Volume Down",
+          "_verb": "spawn-sh",
+          "_mods": "",
+          "_mainKey": "XF86AUDIOLOWERVOLUME"
+        },
+        {
+          "keys": "Mute",
+          "desc": "Mute Output",
+          "_verb": "spawn-sh",
+          "_mods": "",
+          "_mainKey": "XF86AUDIOMUTE"
+        },
+        {
+          "keys": "Mic Mute",
+          "desc": "Mute Input",
+          "_verb": "spawn-sh",
+          "_mods": "",
+          "_mainKey": "XF86AUDIOMICMUTE"
+        }
+      ]
+    },
+    {
+      "title": "Applications",
+      "binds": [
+        {
+          "keys": "Super + Shift + R",
+          "desc": "Run: niri",
+          "_verb": "spawn",
+          "_mods": "Super+Shift",
+          "_mainKey": "R"
+        },
+        {
+          "keys": "MOD + RETURN",
+          "desc": "Open Terminal: Alacritty",
+          "_verb": "spawn",
+          "_mods": "",
+          "_mainKey": "RETURN"
+        },
+        {
+          "keys": "MOD + SPACE",
+          "desc": "App Launcher",
+          "_verb": "spawn-sh",
+          "_mods": "",
+          "_mainKey": "SPACE"
+        },
+        {
+          "keys": "MOD + N",
+          "desc": "Window Switcher",
+          "_verb": "spawn-sh",
+          "_mods": "",
+          "_mainKey": "N"
+        },
+        {
+          "keys": "MOD + V",
+          "desc": "Clipboard History",
+          "_verb": "spawn-sh",
+          "_mods": "",
+          "_mainKey": "V"
+        },
+        {
+          "keys": "MOD + SHIFT + P",
+          "desc": "Power Menu",
+          "_verb": "spawn-sh",
+          "_mods": "",
+          "_mainKey": "P"
+        },
+        {
+          "keys": "MOD + PERIOD",
+          "desc": "Emoji Picker",
+          "_verb": "spawn-sh",
+          "_mods": "",
+          "_mainKey": "PERIOD"
+        },
+        {
+          "keys": "MOD + COMMA",
+          "desc": "Emoji Picker",
+          "_verb": "spawn-sh",
+          "_mods": "",
+          "_mainKey": "COMMA"
+        },
+        {
+          "keys": "MOD + D",
+          "desc": "Open Montage manage: Davinci Resolve",
+          "_verb": "spawn-sh",
+          "_mods": "",
+          "_mainKey": "D"
+        },
+        {
+          "keys": "MOD + B",
+          "desc": "Open Bluetooth manage: bluetui",
+          "_verb": "spawn-sh",
+          "_mods": "",
+          "_mainKey": "B"
+        },
+        {
+          "keys": "MOD + I",
+          "desc": "Open Wifi manage: nmtui",
+          "_verb": "spawn-sh",
+          "_mods": "",
+          "_mainKey": "I"
+        },
+        {
+          "keys": "MOD + Shift + M",
+          "desc": "Open Tracks manage: cmus",
+          "_verb": "spawn-sh",
+          "_mods": "Shift",
+          "_mainKey": "M"
+        },
+        {
+          "keys": "MOD + P",
+          "desc": "Open Profiler: btop",
+          "_verb": "spawn-sh",
+          "_mods": "",
+          "_mainKey": "P"
+        },
+        {
+          "keys": "MOD + A",
+          "desc": "Open Profiler: aquarium",
+          "_verb": "spawn-sh",
+          "_mods": "",
+          "_mainKey": "A"
+        },
+        {
+          "keys": "MOD + S",
+          "desc": "Open Profiler: session",
+          "_verb": "spawn-sh",
+          "_mods": "",
+          "_mainKey": "S"
+        },
+        {
+          "keys": "MOD + R",
+          "desc": "Open Profiler: btop",
+          "_verb": "spawn-sh",
+          "_mods": "",
+          "_mainKey": "R"
+        },
+        {
+          "keys": "Super + M",
+          "desc": "Run: wl-kbptr",
+          "_verb": "spawn",
+          "_mods": "Super",
+          "_mainKey": "M"
+        },
+        {
+          "keys": "MOD + E",
+          "desc": "File Manager: Yazi",
+          "_verb": "spawn-sh",
+          "_mods": "",
+          "_mainKey": "E"
+        },
+        {
+          "keys": "MOD + SHIFT + E",
+          "desc": "File Manager: Nautilus",
+          "_verb": "spawn",
+          "_mods": "",
+          "_mainKey": "E"
+        },
+        {
+          "keys": "Play",
+          "desc": "Run: playerctl",
+          "_verb": "spawn",
+          "_mods": "",
+          "_mainKey": "XF86AudioPlay"
+        },
+        {
+          "keys": "Next",
+          "desc": "Run: playerctl",
+          "_verb": "spawn",
+          "_mods": "",
+          "_mainKey": "XF86AudioNext"
+        },
+        {
+          "keys": "Prev",
+          "desc": "Run: playerctl",
+          "_verb": "spawn",
+          "_mods": "",
+          "_mainKey": "XF86AudioPrev"
+        }
+      ]
+    },
+    {
+      "title": "Window Management",
+      "binds": [
+        {
+          "keys": "MOD + Q",
+          "desc": "Close Window",
+          "_verb": "close-window",
+          "_mods": "",
+          "_mainKey": "Q"
+        },
+        {
+          "keys": "MOD + SHIFT + F",
+          "desc": "Fullscreen Window",
+          "_verb": "fullscreen-window",
+          "_mods": "",
+          "_mainKey": "F"
+        }
+      ]
+    },
+    {
+      "title": "Column Navigation",
+      "binds": [
+        {
+          "keys": "MOD + LEFT",
+          "desc": "Focus Column Left",
+          "_verb": "focus-column-left",
+          "_mods": "",
+          "_mainKey": "LEFT"
+        },
+        {
+          "keys": "MOD + H",
+          "desc": "Focus Column Left",
+          "_verb": "focus-column-left",
+          "_mods": "",
+          "_mainKey": "H"
+        },
+        {
+          "keys": "MOD + RIGHT",
+          "desc": "Focus Column Right",
+          "_verb": "focus-column-right",
+          "_mods": "",
+          "_mainKey": "RIGHT"
+        },
+        {
+          "keys": "MOD + L",
+          "desc": "Focus Column Right",
+          "_verb": "focus-column-right",
+          "_mods": "",
+          "_mainKey": "L"
+        },
+        {
+          "keys": "MOD + HOME",
+          "desc": "Focus Column First",
+          "_verb": "focus-column-first",
+          "_mods": "",
+          "_mainKey": "HOME"
+        },
+        {
+          "keys": "MOD + END",
+          "desc": "Focus Column Last",
+          "_verb": "focus-column-last",
+          "_mods": "",
+          "_mainKey": "END"
+        },
+        {
+          "keys": "MOD + WHEELSCROLLRIGHT",
+          "desc": "Focus Column Right",
+          "_verb": "focus-column-right",
+          "_mods": "",
+          "_mainKey": "WHEELSCROLLRIGHT"
+        },
+        {
+          "keys": "MOD + WHEELSCROLLLEFT",
+          "desc": "Focus Column Left",
+          "_verb": "focus-column-left",
+          "_mods": "",
+          "_mainKey": "WHEELSCROLLLEFT"
+        },
+        {
+          "keys": "MOD + SHIFT + WHEELSCROLLDOWN",
+          "desc": "Focus Column Right",
+          "_verb": "focus-column-right",
+          "_mods": "",
+          "_mainKey": "WHEELSCROLLDOWN"
+        },
+        {
+          "keys": "MOD + SHIFT + WHEELSCROLLUP",
+          "desc": "Focus Column Left",
+          "_verb": "focus-column-left",
+          "_mods": "",
+          "_mainKey": "WHEELSCROLLUP"
+        }
+      ]
+    },
+    {
+      "title": "Window Focus",
+      "binds": [
+        {
+          "keys": "MOD + UP",
+          "desc": "Focus Window Up",
+          "_verb": "focus-window-up",
+          "_mods": "",
+          "_mainKey": "UP"
+        },
+        {
+          "keys": "MOD + DOWN",
+          "desc": "Focus Window Down",
+          "_verb": "focus-window-down",
+          "_mods": "",
+          "_mainKey": "DOWN"
+        }
+      ]
+    },
+    {
+      "title": "Workspace Navigation",
+      "binds": [
+        {
+          "keys": "MOD + WHEELSCROLLDOWN",
+          "desc": "Focus Workspace Down",
+          "_verb": "focus-workspace-down",
+          "_mods": "",
+          "_mainKey": "WHEELSCROLLDOWN"
+        },
+        {
+          "keys": "MOD + WHEELSCROLLUP",
+          "desc": "Focus Workspace Up",
+          "_verb": "focus-workspace-up",
+          "_mods": "",
+          "_mainKey": "WHEELSCROLLUP"
+        },
+        {
+          "keys": "Super + J",
+          "desc": "Focus Workspace Down",
+          "_verb": "focus-workspace-down",
+          "_mods": "Super",
+          "_mainKey": "J"
+        },
+        {
+          "keys": "Super + K",
+          "desc": "Focus Workspace Up",
+          "_verb": "focus-workspace-up",
+          "_mods": "Super",
+          "_mainKey": "K"
+        },
+        {
+          "keys": "MOD + 1-9",
+          "desc": "Focus Workspace 1-9",
+          "_verb": "focus-workspace",
+          "_mods": "",
+          "_mainKey": "1-9",
+          "_merged": true
+        },
+        {
+          "keys": "MOD + TAB",
+          "desc": "Focus Workspace Previous",
+          "_verb": "focus-workspace-previous",
+          "_mods": "",
+          "_mainKey": "TAB"
+        }
+      ]
+    },
+    {
+      "title": "Move Columns",
+      "binds": [
+        {
+          "keys": "MOD + CTRL + LEFT",
+          "desc": "Move Column Left",
+          "_verb": "move-column-left",
+          "_mods": "",
+          "_mainKey": "LEFT"
+        },
+        {
+          "keys": "MOD + CTRL + H",
+          "desc": "Move Column Left",
+          "_verb": "move-column-left",
+          "_mods": "",
+          "_mainKey": "H"
+        },
+        {
+          "keys": "MOD + CTRL + RIGHT",
+          "desc": "Move Column Right",
+          "_verb": "move-column-right",
+          "_mods": "",
+          "_mainKey": "RIGHT"
+        },
+        {
+          "keys": "MOD + CTRL + L",
+          "desc": "Move Column Right",
+          "_verb": "move-column-right",
+          "_mods": "",
+          "_mainKey": "L"
+        },
+        {
+          "keys": "MOD + CTRL + HOME",
+          "desc": "Move Column To First",
+          "_verb": "move-column-to-first",
+          "_mods": "",
+          "_mainKey": "HOME"
+        },
+        {
+          "keys": "MOD + CTRL + END",
+          "desc": "Move Column To Last",
+          "_verb": "move-column-to-last",
+          "_mods": "",
+          "_mainKey": "END"
+        },
+        {
+          "keys": "MOD + SHIFT + CTRL + LEFT",
+          "desc": "Move Column To Monitor Left",
+          "_verb": "move-column-to-monitor-left",
+          "_mods": "",
+          "_mainKey": "LEFT"
+        },
+        {
+          "keys": "MOD + SHIFT + CTRL + RIGHT",
+          "desc": "Move Column To Monitor Right",
+          "_verb": "move-column-to-monitor-right",
+          "_mods": "",
+          "_mainKey": "RIGHT"
+        },
+        {
+          "keys": "MOD + SHIFT + CTRL + UP",
+          "desc": "Move Column To Monitor Up",
+          "_verb": "move-column-to-monitor-up",
+          "_mods": "",
+          "_mainKey": "UP"
+        },
+        {
+          "keys": "MOD + SHIFT + CTRL + DOWN",
+          "desc": "Move Column To Monitor Down",
+          "_verb": "move-column-to-monitor-down",
+          "_mods": "",
+          "_mainKey": "DOWN"
+        },
+        {
+          "keys": "MOD + CTRL + J",
+          "desc": "Move Column To Workspace Down",
+          "_verb": "move-column-to-workspace-down",
+          "_mods": "",
+          "_mainKey": "J"
+        },
+        {
+          "keys": "MOD + CTRL + K",
+          "desc": "Move Column To Workspace Up",
+          "_verb": "move-column-to-workspace-up",
+          "_mods": "",
+          "_mainKey": "K"
+        },
+        {
+          "keys": "MOD + CTRL + WHEELSCROLLDOWN",
+          "desc": "Move Column To Workspace Down",
+          "_verb": "move-column-to-workspace-down",
+          "_mods": "",
+          "_mainKey": "WHEELSCROLLDOWN"
+        },
+        {
+          "keys": "MOD + CTRL + WHEELSCROLLUP",
+          "desc": "Move Column To Workspace Up",
+          "_verb": "move-column-to-workspace-up",
+          "_mods": "",
+          "_mainKey": "WHEELSCROLLUP"
+        },
+        {
+          "keys": "MOD + CTRL + WHEELSCROLLRIGHT",
+          "desc": "Move Column Right",
+          "_verb": "move-column-right",
+          "_mods": "",
+          "_mainKey": "WHEELSCROLLRIGHT"
+        },
+        {
+          "keys": "MOD + CTRL + WHEELSCROLLLEFT",
+          "desc": "Move Column Left",
+          "_verb": "move-column-left",
+          "_mods": "",
+          "_mainKey": "WHEELSCROLLLEFT"
+        },
+        {
+          "keys": "MOD + CTRL + SHIFT + WHEELSCROLLDOWN",
+          "desc": "Move Column Right",
+          "_verb": "move-column-right",
+          "_mods": "",
+          "_mainKey": "WHEELSCROLLDOWN"
+        },
+        {
+          "keys": "MOD + CTRL + SHIFT + WHEELSCROLLUP",
+          "desc": "Move Column Left",
+          "_verb": "move-column-left",
+          "_mods": "",
+          "_mainKey": "WHEELSCROLLUP"
+        },
+        {
+          "keys": "MOD + CTRL + 1-9",
+          "desc": "Move Column To Workspace 1-9",
+          "_verb": "move-column-to-workspace",
+          "_mods": "",
+          "_mainKey": "1-9",
+          "_merged": true
+        }
+      ]
+    },
+    {
+      "title": "Move Windows",
+      "binds": [
+        {
+          "keys": "MOD + CTRL + UP",
+          "desc": "Move Window Up",
+          "_verb": "move-window-up",
+          "_mods": "",
+          "_mainKey": "UP"
+        },
+        {
+          "keys": "MOD + CTRL + DOWN",
+          "desc": "Move Window Down",
+          "_verb": "move-window-down",
+          "_mods": "",
+          "_mainKey": "DOWN"
+        }
+      ]
+    },
+    {
+      "title": "Column Management",
+      "binds": [
+        {
+          "keys": "Super + F",
+          "desc": "Maximize Column",
+          "_verb": "maximize-column",
+          "_mods": "Super",
+          "_mainKey": "F"
+        },
+        {
+          "keys": "MouseForward",
+          "desc": "Maximize Column",
+          "_verb": "maximize-column",
+          "_mods": "",
+          "_mainKey": "MouseForward"
+        }
+      ]
+    },
+    {
+      "title": "Column Width",
+      "binds": [
+        {
+          "keys": "MOD + MINUS",
+          "desc": "Set Column Width \" 10%\"",
+          "_verb": "set-column-width",
+          "_mods": "",
+          "_mainKey": "MINUS"
+        },
+        {
+          "keys": "MOD + EQUAL",
+          "desc": "Set Column Width \"+10%\"",
+          "_verb": "set-column-width",
+          "_mods": "",
+          "_mainKey": "EQUAL"
+        }
+      ]
+    },
+    {
+      "title": "Screenshots",
+      "binds": [
+        {
+          "keys": "PrtSc",
+          "desc": "Screenshot",
+          "_verb": "screenshot",
+          "_mods": "",
+          "_mainKey": "Print"
+        }
+      ]
+    },
+    {
+      "title": "Other",
+      "binds": [
+        {
+          "keys": "MOD + SHIFT + ESCAPE",
+          "desc": "Show Hotkey Overlay",
+          "_verb": "show-hotkey-overlay",
+          "_mods": "",
+          "_mainKey": "ESCAPE"
+        },
+        {
+          "keys": "MOD + SHIFT + LEFT",
+          "desc": "Focus Monitor Left",
+          "_verb": "focus-monitor-left",
+          "_mods": "",
+          "_mainKey": "LEFT"
+        },
+        {
+          "keys": "MOD + SHIFT + RIGHT",
+          "desc": "Focus Monitor Right",
+          "_verb": "focus-monitor-right",
+          "_mods": "",
+          "_mainKey": "RIGHT"
+        },
+        {
+          "keys": "MOD + SHIFT + UP",
+          "desc": "Focus Monitor Up",
+          "_verb": "focus-monitor-up",
+          "_mods": "",
+          "_mainKey": "UP"
+        },
+        {
+          "keys": "MOD + SHIFT + DOWN",
+          "desc": "Focus Monitor Down",
+          "_verb": "focus-monitor-down",
+          "_mods": "",
+          "_mainKey": "DOWN"
+        },
+        {
+          "keys": "MOD + C",
+          "desc": "Center Column",
+          "_verb": "center-column",
+          "_mods": "",
+          "_mainKey": "C"
+        },
+        {
+          "keys": "MOD + CTRL + C",
+          "desc": "Center Visible Columns",
+          "_verb": "center-visible-columns",
+          "_mods": "",
+          "_mainKey": "C"
+        },
+        {
+          "keys": "MOD + SHIFT + MINUS",
+          "desc": "Set Window Height \" 10%\"",
+          "_verb": "set-window-height",
+          "_mods": "",
+          "_mainKey": "MINUS"
+        },
+        {
+          "keys": "MOD + SHIFT + EQUAL",
+          "desc": "Set Window Height \"+10%\"",
+          "_verb": "set-window-height",
+          "_mods": "",
+          "_mainKey": "EQUAL"
+        },
+        {
+          "keys": "MOD + ALT + F",
+          "desc": "Toggle Window Floating",
+          "_verb": "toggle-window-floating",
+          "_mods": "",
+          "_mainKey": "F"
+        },
+        {
+          "keys": "MOD + CTRL + F",
+          "desc": "Switch Focus Between Floating And Tiling",
+          "_verb": "switch-focus-between-floating-and-tiling",
+          "_mods": "",
+          "_mainKey": "F"
+        },
+        {
+          "keys": "MouseBack",
+          "desc": "Toggle Overview",
+          "_verb": "toggle-overview",
+          "_mods": "",
+          "_mainKey": "MouseBack"
+        }
+      ]
+    },
+    {
+      "title": "Mouse277",
+      "binds": [
+        {
+          "keys": "MOD + W",
+          "desc": "Toggle Column Tabbed Display",
+          "_verb": "toggle-column-tabbed-display",
+          "_mods": "",
+          "_mainKey": "W"
+        },
+        {
+          "keys": "CTRL + SHIFT + 1",
+          "desc": "Screenshot",
+          "_verb": "screenshot",
+          "_mods": "",
+          "_mainKey": "1"
+        },
+        {
+          "keys": "CTRL + SHIFT + 2",
+          "desc": "Screenshot Screen",
+          "_verb": "screenshot-screen",
+          "_mods": "",
+          "_mainKey": "2"
+        },
+        {
+          "keys": "CTRL + SHIFT + 3",
+          "desc": "Screenshot Window",
+          "_verb": "screenshot-window",
+          "_mods": "",
+          "_mainKey": "3"
+        },
+        {
+          "keys": "CTRL + SHIFT + 4",
+          "desc": "Screenshot: Select and Edit",
+          "_verb": "spawn-sh",
+          "_mods": "",
+          "_mainKey": "4"
+        },
+        {
+          "keys": "MOD + ESCAPE",
+          "desc": "Toggle Keyboard Shortcuts Inhibit",
+          "_verb": "toggle-keyboard-shortcuts-inhibit",
+          "_mods": "",
+          "_mainKey": "ESCAPE"
+        },
+        {
+          "keys": "CTRL + ALT + DELETE",
+          "desc": "Quit; } // Also Quits Niri",
+          "_verb": "quit",
+          "_mods": "",
+          "_mainKey": "DELETE"
+        },
+        {
+          "keys": "Super + Shift + F1",
+          "desc": "Run: sh",
+          "_verb": "spawn",
+          "_mods": "Super+Shift",
+          "_mainKey": "F1"
+        },
+        {
+          "keys": "MOD + O",
+          "desc": "Toggle Overview",
+          "_verb": "toggle-overview",
+          "_mods": "",
+          "_mainKey": "O"
+        }
+      ]
+    }
+  ],
+  "detectedCompositor": "niri",
+  "windowWidth": 1400,
+  "windowHeight": 850,
+  "autoHeight": true,
+  "columnCount": 3,
+  "modKeyVariable": "$mod",
+  "hyprlandConfigPath": "~/.config/hypr/hyprland.conf",
+  "hyprlandLuaConfigPath": "~/.config/hypr/hyprland.lua",
+  "hyprlandParserMode": "auto",
+  "niriConfigPath": "~/.config/niri/config.kdl",
+  "mangoConfigPath": "~/.config/mango/config.conf",
+  "mergeSequentialBinds": true,
+  "showUndescribedBinds": true,
+  "splitLargeWorkspaceCategory": true,
+  "workspaceSplitThreshold": 12,
+  "keyColorAlt": "#FF6B6B",
+  "keyColorXF86": "#4ECDC4",
+  "keyColorPrint": "#95E1D3",
+  "keyColorNumeric": "#A8DADC",
+  "keyColorMouse": "#F38181",
+  "keyColorSuper": "",
+  "keyColorCtrl": "",
+  "keyColorShift": "",
+  "keyColorDefault": "#6C757D",
+  "keyLabelColor": "#FFFFFF",
+  "keyTextSuper": "",
+  "keyTextCtrl": "",
+  "keyTextShift": "",
+  "keyTextAlt": "",
+  "keyTextXF86": "",
+  "keyTextPrint": "",
+  "keyTextNumeric": "",
+  "keyTextMouse": "",
+  "keyTextDefault": "",
+  "keyColorMod2": "",
+  "keyColorMod3": "",
+  "keyColorMod5": "",
+  "keyTextMod2": "",
+  "keyTextMod3": "",
+  "keyTextMod5": "",
+  "keyLabelMod2": "",
+  "keyLabelMod3": "",
+  "keyLabelMod5": "",
+  "descriptionTextColor": "",
+  "bindOverrides": {}
+}

@@ -1,0 +1,18 @@
+[palette]
+# Elflord Core Constants
+background = "#000000"       # Pure Black
+foreground = "#ffffff"       # Bright White
+
+# UI Borders & Accents (The famous Elflord Cyan/Blue)
+accent = "#00ffff"           # Cyan
+accent_dim = "#008b8b"       # Dark Cyan
+border = "#0000ff"           # Bright Blue Window Borders
+
+# System Menus & Dropdowns
+surface = "#121212"          # Dark Grey
+surface_hover = "#1c1c1c"    # Light Hover Grey
+
+# Status Indicators (Elflord syntax colors)
+success = "#00ff00"          # Green
+warning = "#ffff00"          # Yellow
+critical = "#ff0000"         # Red

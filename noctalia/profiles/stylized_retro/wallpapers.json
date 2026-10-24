@@ -1,0 +1,19 @@
+{
+  "screens": [
+    {
+      "name": "",
+      "light": "/home/genorred/Pictures/Wallpapers/wallhaven_5wjpk7.jpg",
+      "dark": "/home/genorred/Pictures/Wallpapers/wallhaven_w8p26p.jpg"
+    },
+    {
+      "name": "eDP-1",
+      "light": "/home/genorred/Pictures/Wallpapers/wallhaven_5wjpk7.jpg",
+      "dark": "/home/genorred/Pictures/Wallpapers/wallhaven_w8p26p.jpg"
+    },
+    {
+      "name": "eDP-2",
+      "light": "/home/genorred/Pictures/Wallpapers/wallhaven_5wjpk7.jpg",
+      "dark": "/home/genorred/Pictures/Wallpapers/wallhaven_w8p26p.jpg"
+    }
+  ]
+}

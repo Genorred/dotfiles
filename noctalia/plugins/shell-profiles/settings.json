@@ -1,0 +1,9 @@
+{
+  "profilesDir": "/home/genorred/.config/noctalia/profiles",
+  "icon": "wand",
+  "iconColor": "primary",
+  "includeWallpapers": true,
+  "lastAppliedProfile": "prime",
+  "backupEnabled": true,
+  "backupCount": 5
+}

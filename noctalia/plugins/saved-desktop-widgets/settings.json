@@ -1,0 +1,22 @@
+{
+  "saveWidgets": true,
+  "loadWidgets": true,
+  "monitorWidgets": {
+    "/home/genorred/Pictures/Wallpapers/wallhaven_w8p26p.jpg": [
+      {
+        "name": "eDP-2",
+        "widgets": []
+      },
+      {
+        "name": "eDP-1",
+        "widgets": []
+      }
+    ],
+    "/home/genorred/Pictures/Wallpapers/2164740.jpg": [
+      {
+        "name": "eDP-1",
+        "widgets": []
+      }
+    ]
+  }
+}
