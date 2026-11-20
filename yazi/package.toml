@@ -13,5 +13,25 @@ use = "Deepak22903/kdeconnect-send"
 rev = "06674d1"
 hash = "869884767c2ef592bfb7f5764f8fcae3"
 
+[[plugin.deps]]
+use = "yazi-rs/plugins:git"
+rev = "c0529fc"
+hash = "347cc6b190eb0c2fd60513cc7ae37412"
+
+[[plugin.deps]]
+use = "ndtoan96/ouch"
+rev = "596b666"
+hash = "c2f4f4aca257dcceafa9e3b828dbf1c9"
+
+[[plugin.deps]]
+use = "Sonico98/exifaudio"
+rev = "4506f9d"
+hash = "4761fffb60a12d37096c34a356380cdf"
+
+[[plugin.deps]]
+use = "wylie102/duckdb"
+rev = "3f8c863"
+hash = "87b9233a74325e95011670ed20bbd0d4"
+
 [flavor]
 deps = []

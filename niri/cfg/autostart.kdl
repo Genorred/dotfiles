@@ -1,11 +1,16 @@
 // ────────────── Startup Applications ──────────────
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Miscellaneous#spawn-sh-at-startup
-
+    //
     // spawn-sh-at-startup "/usr/lib/polkit-kde-authentication-agent-1 &" // Polkit
+spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
     // spawn-sh-at-startup "qs -c noctalia-shell"
-    spawn-sh-at-startup "noctalia"
+    // spawn-sh-at-startup "noctalia"
     // spawn-sh-at-startup "firefox"
     // spawn-sh-at-startup "obsidian"
     // spawn-sh-at-startup "sleep 15; qs -c noctalia-shell ipc call powerProfile enableNoctaliaPerformance"
 
 
+// Clipboard history
+spawn-at-startup "wl-paste" "--type" "text" "--watch" "cliphist" "store"
+spawn-at-startup "wl-paste" "--type" "image" "--watch" "cliphist" "store"
+spawn-at-startup "quickshell" "-c" "edge-flash"

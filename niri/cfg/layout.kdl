@@ -1,6 +1,6 @@
-overview {
-    zoom 0.25
-}
+// overview {
+//     zoom 0.25
+// }
     layout {
         gaps 0 // Gap between windows
         // gaps 6 // Gap between windows

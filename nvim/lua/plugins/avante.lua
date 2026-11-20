@@ -36,30 +36,23 @@ return {
 --   },
 -- }
 -- ,
-  opts = {
-    provider = "openai",
-    -- mode = "legacy",
-    providers = {
-      openai = {
-        __inherited_from = "openai",
-        endpoint = "http://localhost:11434/v1/",
-        model = "koboldcpp",
-        timeout = 30000,
-        -- context_window = 16384, -- 🌟 Tells Avante your exact Kobold context capacity
-        -- context_window = 32768, -- 🌟 Tells Avante your exact Kobold context capacity
-        extra_request_body = {
-          temperature = 0.6,
-          max_tokens = 8192,
-          top_p = 0.85,
-          top_k = 20,
-          min_p = 0.0,
-          rep_pen = 1.1,
-          -- max_completion_tokens = 2048,
-        },
-        -- disable_tools = true,
+  
+opts = {
+  provider = "openrouter",
+  providers = {
+    openrouter = {
+      __inherited_from = "openai",
+      endpoint = "https://openrouter.ai/api/v1",
+      api_key_name = "OPENROUTER_API_KEY",
+      model = "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      extra_request_body = {
+        temperature = 0,
+        max_tokens = 32768, -- Can go up to 65536
       },
-    }
+    },
   },
+}
+,
   web_search_engine = {
     provider = "tavily",  -- or "serpapi", "brave", "kagi", "bing"
   },

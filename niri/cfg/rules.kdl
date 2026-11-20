@@ -12,6 +12,15 @@
         // Sets the window transparency (e.g., 85% opaque)
         // opacity 0.85
     }
+    window-rule {
+        match is-floating=true
+        opacity 0.1
+    }
+
+    window-rule {
+        match is-floating=true is-focused=true
+        opacity 1.0
+    }
 
     window-rule {
         match app-id="deskflow"
@@ -30,3 +39,8 @@
         match namespace="^noctalia-wallpaper*"
         place-within-backdrop true
     }
+// Ueberzug++ preview: always fully opaque
+window-rule {
+    match app-id=r#"^ueberzugpp"#
+    opacity 1.0
+}

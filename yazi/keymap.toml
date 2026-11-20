@@ -22,4 +22,30 @@ on   = [ "<C-s>" ]
 run  = "plugin kdeconnect-send"
 desc = "Send selected files via KDE Connect"
 
+# Ouch: compress selected files
+[[mgr.prepend_keymap]]
+on = ["C"]
+run = "plugin ouch"
+desc = "Compress selected files"
 
+# DuckDB: horizontal column navigation
+[[mgr.prepend_keymap]]
+on = "<C-h>"
+run = "plugin duckdb -1"
+desc = "DuckDB: previous column"
+
+[[mgr.prepend_keymap]]
+on = "<C-l>"
+run = "plugin duckdb +1"
+desc = "DuckDB: next column"
+
+# DuckDB: open database
+[[mgr.prepend_keymap]]
+on = ["g", "o"]
+run = "plugin duckdb -open"
+desc = "Open with DuckDB"
+
+[[mgr.prepend_keymap]]
+on = ["g", "u"]
+run = "plugin duckdb -ui"
+desc = "Open DuckDB UI"

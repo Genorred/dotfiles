@@ -1,4 +1,15 @@
 binds {
+    Mod+G repeat=false { spawn "wl-kbptr" "-o" "modes=tile,bisect"; }
+
+    // Fine cursor movement, repeats while held
+    Ctrl+Alt+H { spawn "wlrctl" "pointer" "move" "-4" "0"; }
+    Ctrl+Alt+J { spawn "wlrctl" "pointer" "move" "0" "4"; }
+    Ctrl+Alt+K { spawn "wlrctl" "pointer" "move" "0" "-4"; }
+    Ctrl+Alt+L { spawn "wlrctl" "pointer" "move" "4" "0"; }
+
+    // Grab / drop (left button down / up)
+    Ctrl+Alt+V repeat=false { spawn "ydotool" "click" "0x40"; }
+    Ctrl+Alt+X repeat=false { spawn "ydotool" "click" "0x80"; }
 
     // ────────────── Keybindings ──────────────
     // https://github.com/YaLTeR/niri/wiki/Configuration:-Key-Bindings
@@ -18,7 +29,8 @@ binds {
     MOD+N hotkey-overlay-title="Window Switcher" {
         spawn-sh "rofi -show window -show-icons";
     }
-    Mod+F1 { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "plugin:keybind-cheatsheet" "toggle"; }
+
+    Mod+F1 { spawn-sh "pkill -x noctalia || noctalia &"; }
     MOD+V hotkey-overlay-title="Clipboard History" {
         spawn-sh "cliphist list | rofi -dmenu | cliphist decode | wl-copy";
     }
@@ -28,15 +40,18 @@ binds {
     MOD+PERIOD hotkey-overlay-title="Emoji Picker" { spawn-sh "rofimoji --files kaomoji --action copy"; }
     MOD+COMMA hotkey-overlay-title="Emoji Picker" { spawn-sh "rofimoji --files emojis_smileys_emotion --action copy"; }
     // MOD+S                               hotkey-overlay-title="Open Browser: firefox" { spawn "firefox"; }
-    MOD+D                               hotkey-overlay-title="Open Montage manage: Davinci Resolve" { spawn-sh "env -u QT_QPA_PLATFORM  davinci-resolve"; }
+    // MOD+D                               hotkey-overlay-title="Open Montage manage: Davinci Resolve" { spawn-sh "env -u QT_QPA_PLATFORM  davinci-resolve"; }
     MOD+B                               hotkey-overlay-title="Open Bluetooth manage: bluetui" { spawn-sh "alacritty -e bluetui"; }
     MOD+I                               hotkey-overlay-title="Open Wifi manage: nmtui" { spawn-sh "alacritty -e nmtui"; }
+    MOD+T                               hotkey-overlay-title="Open time" { spawn-sh "alacritty -e tty-clock -sc"; }
+    MOD+SHIFT+T                         hotkey-overlay-title="Open system tray" { spawn-sh "alacritty -e tray-tui"; }
     MOD+Shift+M                         hotkey-overlay-title="Open Tracks manage: cmus" { spawn-sh "alacritty -e cmus"; }
     MOD+P                               hotkey-overlay-title="Open Profiler: btop" { spawn-sh "alacritty -e btop"; }
     MOD+A                               hotkey-overlay-title="Open Profiler: aquarium" { spawn-sh "alacritty --class asciiquarium-fullscreen -e asciiquarium --transparent"; }
-    MOD+S                               hotkey-overlay-title="Open Profiler: session" { spawn-sh "alacritty -e zellij --layout welcome attach --create welcome"; }
+    MOD+Shift+S                               hotkey-overlay-title="Open Profiler: session" { spawn-sh "alacritty -e zellij --layout welcome attach --create welcome"; }
+    MOD+S                               hotkey-overlay-title="Open Profiler: sound mixer" { spawn-sh "alacritty -e wiremix --tab output"; }
 
-    MOD+R                               hotkey-overlay-title="Open Profiler: btop" { spawn-sh "alacritty -e nvim"; }
+    MOD+R                               hotkey-overlay-title="Open file editor: nvim" { spawn-sh "alacritty -e nvim"; }
     Mod+M { spawn "wl-kbptr"; }
     MOD+ALT+L                           hotkey-overlay-title="Lock Screen: noctalia lock" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
 
@@ -50,18 +65,26 @@ binds {
     // XF86AUDIOMUTE                       allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume muteOutput"; }
     // XF86AUDIOMICMUTE                    allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume muteInput"; }
 // Audio Controls — Noctalia v5
-    XF86AUDIORAISEVOLUME allow-when-locked=true {
-        spawn "noctalia" "msg" "volume-up";
-    }
-    XF86AUDIOLOWERVOLUME allow-when-locked=true {
-        spawn "noctalia" "msg" "volume-down";
-    }
-    XF86AUDIOMUTE allow-when-locked=true {
-        spawn "noctalia" "msg" "volume-mute";
-    }
-    XF86AUDIOMICMUTE allow-when-locked=true {
-        spawn "noctalia" "msg" "mic-mute";
-    }
+XF86AudioRaiseVolume allow-when-locked=true {
+    spawn "pactl" "set-sink-volume" "@DEFAULT_SINK@" "+5%";
+}
+XF86AudioLowerVolume allow-when-locked=true {
+    spawn "pactl" "set-sink-volume" "@DEFAULT_SINK@" "-5%";
+}
+XF86AudioMute allow-when-locked=true {
+    spawn "pactl" "set-sink-mute" "@DEFAULT_SINK@" "toggle";
+}
+XF86AudioMicMute allow-when-locked=true {
+    spawn "pactl" "set-source-mute" "@DEFAULT_SOURCE@" "toggle";
+}
+// Screen brightness
+XF86MonBrightnessUp allow-when-locked=true {
+    spawn "brightnessctl" "set" "+5%"
+}
+
+XF86MonBrightnessDown allow-when-locked=true {
+    spawn "brightnessctl" "set" "5%-"
+}
     XF86AudioPlay { spawn "playerctl" "play-pause"; }
     XF86AudioNext { spawn "playerctl" "next"; }
     XF86AudioPrev { spawn "playerctl" "previous"; }
@@ -146,7 +169,9 @@ binds {
     MOD+TAB                             { focus-workspace-previous; }
 
     // ─── Layout Controls ───
-    Print { screenshot; }
+    Print { spawn-sh "grim -g \"$(slurp)\" - | wl-copy"; }
+    Insert { spawn "quickshell" "-c" "QuickSnip" "-n"; }
+
     Mod+F { maximize-column; }
     MOD+C                               { center-column; }
     MOD+CTRL+C                          { center-visible-columns; }
